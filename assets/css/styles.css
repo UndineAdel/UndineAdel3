@@ -1,0 +1,840 @@
+/*general css for mobile*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--black);
+}
+
+section {
+    margin-bottom: 10vw;
+}
+
+:root {
+    --purple: #242424;
+    --blue: rgb(89, 180, 236);
+    --green: #00F596;
+    --yellow: #FFDF44;
+    --red: #FF6767;
+    --white: #FFFFFF;
+    --black: #242424;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0 5vw;
+}
+
+h1 {
+    color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 2;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 1rem;
+    margin-bottom: 1vh;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: lighter;
+    line-height: 1.55;
+}
+
+section p {
+    margin-bottom: 2vh;
+}
+
+.note {
+    font-style: italic;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1;
+    background-color: var(--yellow);
+    margin-bottom: 0;
+}
+
+.red {
+    background-color: var(--red);
+}
+
+.yellow {
+    background-color: var(--yellow);
+}
+
+.green {
+    background-color: var(--green);
+}
+
+.blue {
+    background-color: var(--blue);
+}
+
+.active {
+    display: block !important;
+}
+
+/*----------------------------buttons and boxes---------------------------------*/
+
+.btn, .box {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: var(--white);
+    text-decoration: underline;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    margin: 15px;
+    padding-left: 25px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.box {
+    border-radius: 0;
+    text-decoration: none;
+    font-size: 1rem;
+    font-style: oblique;
+    font-weight: normal;
+    cursor: initial;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/*----------------------------header and nav---------------------------------*/
+
+.logo {
+    display: block;
+    text-decoration: none;
+    font-weight: bolder;
+    color: var(--white);
+}
+
+.burger {
+    float: left;
+    margin-top: 2vh;
+}
+
+header i {
+    font-size: 1.25rem;
+    color: var(--white);
+}
+
+header {
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 1vh 5vw;
+    text-align: center;
+}
+
+nav {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(200%);
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--purple);
+    transition: all .3s ease-out;
+    padding-top: 15vw;
+}
+
+.nav-active nav {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.nav-active #menu-btn {
+    opacity: 0;
+}
+
+#menu-btn {
+    transition: opacity .3s ease-out;
+}
+
+#menu-btn-close i {
+    display: inline-block;
+    position: absolute;
+    top: 5%;
+    left: 7%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-active nav {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.nav-active #menu-btn {
+    opacity: 0;
+}
+
+nav ul {
+    display: block;
+    padding: 0 4%;
+    margin: 10% 0;
+}
+
+nav ul li {
+    display: block;
+}
+
+nav ul li a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 12% 10% 12% 0;
+}
+
+nav ul li:last-child {
+    border: none;
+}
+
+/*----------------------------footer---------------------------------*/
+
+footer {
+    color: var(--white);
+    background-color: var(--purple);
+    padding: 5vw 0;
+}
+
+footer p {
+    margin-bottom: 2vh;
+}
+
+footer i {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin: 5vw;
+    margin-right: 1vw;
+}
+
+/*----------------------------landing page---------------------------------*/
+
+.hero {
+    height: 50vh;
+    background-color: var(--black);
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5vw;
+}
+
+.hero .btn {
+    margin: 0 auto;
+    margin-top: 15vh;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.gallery {
+    height: 50vh;
+    background-color: var(--black);
+    background-image: url(../images/gallery-mobile.jpg);
+    background-size: cover;
+}
+
+.signup-molecule {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.initiative {
+    color: var(--white);
+    background-color: var(--blue);
+    margin: 5vw;
+    margin-bottom: 5vh;
+    padding: 10px 5px;
+}
+
+.initiative a {
+    text-decoration: underline;
+}
+
+/*----------------------------program page---------------------------------*/
+
+.otherhero {
+    padding: 0;
+    margin: 5vh 5vw;
+}
+
+.otherhero h1 {
+    margin: 0;
+    color: var(--black);
+    text-align: left;
+}
+
+.filters label {
+    font-weight: lighter;
+}
+
+.filters input[type='checkbox'] {
+    width: 30px;
+    height: 10px;
+    border: 2px solid green;
+}
+
+.cb-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cb-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 5px solid var(--green);
+}
+
+.cb-container input:checked~.checkmark {
+    background-color: var(--green);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.cb-container input:checked~.checkmark:after {
+    display: block;
+}
+
+.cb-container .checkmark:after {
+    left: 4px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.filters input[type='search'] {
+    height: 20px;
+    width: 100%;
+    padding: 20px 0 10px 0;
+    margin-bottom: 12px;
+    font: inherit;
+}
+
+.filters select {
+    font: inherit;
+}
+
+.line-up {
+    margin: 0 5vw;
+}
+
+.band-teaser {
+    color: var(--white);
+    background-color: var(--purple);
+    height: 40vh;
+    margin-bottom: 5vw;
+}
+
+.band-teaser div {
+    padding: 10px;
+}
+
+.band-teaser-text h2 {
+    margin: 0;
+}
+
+.band-pic .box {
+    height: 75px;
+    width: 75px;
+    margin: 0 0 2vw 0;
+    padding: 5px;
+    align-self: flex-end;
+}
+
+.band-pic {
+    background-image: url(../images/bandpics/mediocre-hair-day.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.band-teaser-text {
+    position: relative;
+}
+
+.club {
+    color: var(--white);
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    text-align: right;
+    font-size: 0.75rem;
+}
+
+#modal-panel {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 50% opacity, black overlay */
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#band-details {
+    display: block;
+    position: absolute;
+    background-color: var(--white);
+    left: 0;
+    right: 0;
+    top: 10vh;
+    margin: auto;
+    width: 90vw;
+    height: 85vh;
+    padding: 5vw;
+}
+
+.band-description {
+    color: var(--black);
+    padding: 0;
+    margin: 0;
+    height: 12vh;
+    overflow: scroll;
+}
+
+#band-details>* {
+    margin: 0;
+}
+
+#band-details .some {
+    position: absolute;
+    bottom: 5vw;
+    right: 5vw;
+    font-size: 1.5rem;
+    color: var(--purple);
+}
+
+#band-details .band-parameters {
+    position: absolute;
+    bottom: 5vw;
+    left: 5vw;
+}
+
+#band-details .band-parameters>* {
+    margin: 0;
+}
+
+#band-details .some i {
+    margin-left: 15px;
+    color: var(--purple);
+}
+
+#details-btn-close {
+    font-size: 1.5rem;
+    color: var(--black);
+    float: right;
+}
+
+/*----------------------------registration page---------------------------------*/
+
+form {
+    margin: 0 5vw;
+}
+
+input {
+    display: block;
+}
+
+form label {
+    font-weight: lighter;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 5vh;
+    padding: 0;
+}
+
+input, select {
+    font-weight: bolder;
+    width: 100%;
+    border: none;
+    border-bottom: 5px solid var(--green);
+}
+
+input[type="submit"], input[type="reset"] {
+    border-bottom: none;
+}
+
+textarea {
+    width: 100%;
+    height: 30vh;
+    border: none;
+}
+
+.padding {
+    padding: 2vh 0;
+}
+
+.rb-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.rb-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.rb-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 5px solid var(--green);
+    border-radius: 50%;
+}
+
+.rb-container input:checked~.rb-checkmark {
+    background-color: var(--green);
+}
+
+/*----------------------------stages page---------------------------------*/
+
+.stage-molecule {
+    color: var(--white);
+    background-color: var(--black);
+    margin-bottom: 5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.stage-molecule div {
+    padding: 10px;
+    align-self: flex-end;
+}
+
+.stage-molecule p {
+    color: var(--white);
+}
+
+.stage-pic {
+    height: 35vh;
+    width: 100%;
+    background-image: url(../images/stages/royal/royal1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.stage-pic .box {
+    height: 100px;
+    width: 100px;
+}
+
+/*----------------------------faq page---------------------------------*/
+
+.faq-box {
+    background-color: var(--yellow);
+    margin: 5vw;
+    padding: 5vw 0;
+}
+
+.faq-box h2 {
+    margin-bottom: 5vw;
+}
+
+.question {
+    font-weight: bold;
+}
+
+/* style for tablet (portrait) and upwards */
+
+@media screen and (min-width: 768px) {
+    /*general css for desktop*/
+    body {
+        font-size: 18px;
+    }
+    /*----------------------------header and nav---------------------------------*/
+    header {
+        padding: 1.5vh 10vw;
+        display: block;
+    }
+    header p {
+        display: inline-block;
+        margin: 0 auto;
+    }
+    .logo {
+        float: left;
+    }
+    nav {
+        position: relative;
+        transform: translateX(0);
+        float: right;
+        width: 30%;
+        height: auto;
+        transition: none;
+        padding-top: 0;
+    }
+    #menu-btn {
+        display: none;
+    }
+    #menu-btn-close i {
+        display: none;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+    }
+    nav ul li {
+        display: inline-block;
+        border-bottom: none;
+    }
+    nav ul li a {
+        display: inline-block;
+        padding: 0;
+    }
+    nav ul li a:hover {
+        color: var(--black);
+        background-color: var(--yellow);
+    }
+    /*----------------------------footer---------------------------------*/
+    footer {
+        padding: 5vh 10vw;
+    }
+    footer * {
+        margin: 0;
+        padding: 0;
+    }
+    footer .flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    footer a i {
+        margin: 0;
+        padding: 0;
+        margin-right: 1vw;
+        font-size: 1.5rem;
+    }
+    footer a i:hover {
+        color: var(--yellow);
+    }
+    /*----------------------------landing page---------------------------------*/
+    section {
+        margin-bottom: 5vw;
+    }
+    section * {
+        margin: 0;
+    }
+    .hero {
+        height: 75vh;
+    }
+    .hero .btn {
+        margin-top: 45vh;
+    }
+    .about {
+        column-count: 3;
+        column-gap: 3vw;
+        margin: 0 10vw 5vw 10vw;
+    }
+    .about * {
+        margin: 0;
+    }
+    .lp-flex-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 10vw 5vw 10vw;
+    }
+    .registration, .initiative, .accommodation {
+        width: 23vw;
+        margin: 0;
+    }
+    .initiative {
+        padding: 2vw;
+    }
+    .gallery {
+        background-image: url(../images/desktop-gallery.jpg);
+        background-position: center;
+        display: block;
+        height: 300px;
+    }
+    /*----------------------------program page---------------------------------*/
+    .otherhero {
+        padding: 0;
+        margin: 5vh 10vw;
+    }
+    .otherhero h1 {
+        color: var(--black);
+        text-align: left;
+    }
+    .filters input[type='search'], .filters select {
+        width: 24vw;
+    }
+    .filters select {
+        display: block;
+    }
+    .line-up {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 10vw 5vw 10vw;
+    }
+    .band-teaser {
+        width: 30%;
+        transition: all .2s ease-in-out;
+        cursor: pointer;
+    }
+    .band-teaser:hover {
+        transform: scale(1.1);
+    }
+    .band-pic .box {
+        margin: 0 0 1.3vw 0;
+    }
+    #band-details {
+        width: 70vw;
+    }
+    .band-description {
+        width: 50%;
+    }
+    #band-details .teaser-container {
+        width: 60%;
+    }
+    #band-details .description-container {
+        width: 30%;
+        height: 100%;
+    }
+    .band-description {
+        margin: 0;
+        width: 20vw;
+        position: absolute;
+        top: 5vw;
+        left: 43vw;
+        height: auto;
+        overflow: hidden;
+    }
+    #band-details .band-parameters {
+        bottom: 5vw;
+        left: 43vw;
+    }
+    #band-details .teaser-container .band-pic {
+        background-size: cover;
+        height: 40vh;
+    }
+    #band-details .flex-wrap {
+        display: flex;
+    }
+    #band-details .band-teaser-text {
+        position: absolute;
+        bottom: 5vw;
+        width: 50%;
+    }
+    #band-details .box {
+        margin: 0 0 -6vw 0;
+    }
+    /*----------------------------registration page---------------------------------*/
+    .signup {
+        margin: 0 10vw 10vw 10vw;
+    }
+    .performance-signup, .accommodation-signup {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    form {
+        width: 35vw;
+    }
+    .rules {
+        width: 40vw;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .rules .signup-molecule {
+        width: 15vw;
+    }
+    .notes {
+        width: 20vw;
+    }
+    .notes .initiative {
+        width: unset;
+    }
+    fieldset {
+        margin-top: 3vh;
+    }
+    /*----------------------------stages page---------------------------------*/
+    .stage-molecule {
+        width: 30%;
+    }
+    .stage-pic .box {
+        margin: ;
+    }
+    /*----------------------------faq page---------------------------------*/
+    .faq {
+        display: flex;
+        margin: 0 10vw 10vw 10vw;
+    }
+    .faq-box {
+        margin: 0 3vw 0 0;
+        padding: 2vw 2vw;
+        width: 30vw;
+    }
+    .faq-box h2 {
+        margin-bottom: 2vw;
+    }
